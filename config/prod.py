@@ -44,3 +44,7 @@ CACHES = {
 # Configuración de Celery con Redis
 CELERY_BROKER_URL = config('CELERY_BROKER_URL')
 CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND')
+
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS').split(',')
+
+CSRF_TRUSTED_ORIGINS = ['https://be.pozosscz.com']
