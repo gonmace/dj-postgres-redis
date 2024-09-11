@@ -22,6 +22,6 @@ COPY . /app/
 
 RUN chmod +x ./entrypoint.sh
 
-RUN python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput --settings=config.prod
 
 EXPOSE 8000
