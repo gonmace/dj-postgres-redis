@@ -1,6 +1,6 @@
 # docker-compose.yml
 services:
-  postgres:
+  pozos-db:
     image: postgres:15-alpine  
     container_name: postgres_db
     ports:
@@ -12,7 +12,7 @@ services:
     networks:
       - pozos_network
 
-  redis:
+  pozos-redis:
     image: redis:alpine
     container_name: redis_cache
     ports:
@@ -20,7 +20,7 @@ services:
     networks:
       - pozos_network
 
-  django:
+  pozos-dj:
     build:
       context: .
       dockerfile: Dockerfile
@@ -41,7 +41,7 @@ services:
 
 volumes:
   postgres_data:
-  static:
+  staticfiles:
   media:
 
 networks:
