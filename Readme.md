@@ -29,4 +29,4 @@ Uses gunicorn + Redis.
     docker-compose exec django python manage.py createsuperuser --settings=config.prod
     ```
 
-    Test it out at [http://localhost:8003](http://localhost:8003). No staticfiles.
+    Test it out at [http://localhost:8003](http://localhost:8003).
