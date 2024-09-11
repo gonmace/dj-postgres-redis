@@ -25,3 +25,9 @@ DATABASES = {
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_COOKIE_SECURE = False
+
+CSRF_USE_SESSIONS = False
