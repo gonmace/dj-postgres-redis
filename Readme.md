@@ -25,6 +25,8 @@ Uses gunicorn + Redis.
 
     ```sh
     docker-compose up -d --build
+    docker-compose exec django python manage.py migrate --settings=config.prod
+    docker-compose exec django python manage.py createsuperuser --settings=config.prod
     ```
 
     Test it out at [http://localhost:8003](http://localhost:8003). No staticfiles.
